@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "stepmotor_pio[0]",
+					"strict" : false
+				},
+				{
+					"name" : "stepmotor_pio[1]",
+					"strict" : false
+				},
+				{
+					"name" : "stepmotor_pio[2]",
+					"strict" : false
+				},
+				{
+					"name" : "stepmotor_pio[3]",
+					"strict" : false
+				},
+				{
+					"name" : "stepmotor_dir",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_clk_50",
+					"strict" : false
+				},
+				{
+					"name" : "stepmotor_quarter",
+					"strict" : false
+				},
+				{
+					"name" : "stepmotor_en",
+					"strict" : false
+				},
+				{
+					"name" : "stepmotor_vel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "stepmotor_vel[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
