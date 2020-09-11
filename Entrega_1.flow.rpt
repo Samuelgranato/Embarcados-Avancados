@@ -1,5 +1,5 @@
 Flow report for Entrega_1
-Tue Sep  1 20:23:24 2020
+Thu Sep 10 21:25:20 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Tue Sep  1 20:23:13 2020           ;
+; Flow Status                     ; Successful - Thu Sep 10 21:24:58 2020           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; Entrega_1                                       ;
-; Top-level Entity Name           ; toplevel                                        ;
+; Top-level Entity Name           ; LAB2_FPGA_NIOS                                  ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSXFC6D6F31C6                                  ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 127 / 41,910 ( < 1 % )                          ;
-; Total registers                 ; 114                                             ;
-; Total pins                      ; 10 / 499 ( 2 % )                                ;
+; Logic utilization (in ALMs)     ; 716 / 41,910 ( 2 % )                            ;
+; Total registers                 ; 986                                             ;
+; Total pins                      ; 16 / 499 ( 3 % )                                ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                           ;
+; Total block memory bits         ; 273,408 / 5,662,720 ( 5 % )                     ;
 ; Total DSP Blocks                ; 0 / 112 ( 0 % )                                 ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                                   ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                                   ;
@@ -67,27 +67,34 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/01/2020 20:21:47 ;
+; Start date & time ; 09/10/2020 21:19:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Entrega_1           ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 159213206882365.159900250728297        ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; toplevel    ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; toplevel    ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; toplevel    ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; toplevel                               ; Entrega_1     ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                               ;
++-------------------------------------+------------------------------------------------------------+---------------+----------------+------------+
+; Assignment Name                     ; Value                                                      ; Default Value ; Entity Name    ; Section Id ;
++-------------------------------------+------------------------------------------------------------+---------------+----------------+------------+
+; COMPILER_SIGNATURE_ID               ; 268891677506820.159978359815785                            ; --            ; --             ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                         ; --            ; --             ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                          ; --            ; --             ; --         ;
+; MISC_FILE                           ; niosLab2/synthesis/../niosLab2.cmp                         ; --            ; --             ; --         ;
+; MISC_FILE                           ; niosLab2/synthesis/../../niosLab2.qsys                     ; --            ; --             ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                     ; --            ; LAB2_FPGA_NIOS ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                     ; --            ; LAB2_FPGA_NIOS ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                     ; --            ; LAB2_FPGA_NIOS ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                        ; --            ; --             ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                      ; --            ; --             ; --         ;
+; SLD_FILE                            ; niosLab2/synthesis/niosLab2.regmap                         ; --            ; --             ; --         ;
+; SLD_FILE                            ; niosLab2/synthesis/niosLab2.debuginfo                      ; --            ; --             ; --         ;
+; SLD_INFO                            ; QSYS_NAME niosLab2 HAS_SOPCINFO 1 GENERATION_ID 1599783312 ; --            ; niosLab2       ; --         ;
+; SOPCINFO_FILE                       ; niosLab2/synthesis/../../niosLab2.sopcinfo                 ; --            ; --             ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                         ; --            ; --             ; --         ;
+; TOP_LEVEL_ENTITY                    ; LAB2_FPGA_NIOS                                             ; Entrega_1     ; --             ; --         ;
++-------------------------------------+------------------------------------------------------------+---------------+----------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -95,11 +102,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 1032 MB             ; 00:00:44                           ;
-; Fitter               ; 00:00:53     ; 1.0                     ; 2427 MB             ; 00:01:32                           ;
-; Assembler            ; 00:00:13     ; 1.0                     ; 981 MB              ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:10     ; 1.1                     ; 1208 MB             ; 00:00:07                           ;
-; Total                ; 00:01:36     ; --                      ; --                  ; 00:02:30                           ;
+; Analysis & Synthesis ; 00:01:46     ; 1.0                     ; 1184 MB             ; 00:03:45                           ;
+; Fitter               ; 00:02:47     ; 1.1                     ; 2539 MB             ; 00:05:22                           ;
+; Assembler            ; 00:00:17     ; 1.0                     ; 990 MB              ; 00:00:11                           ;
+; Timing Analyzer      ; 00:00:21     ; 1.6                     ; 1274 MB             ; 00:00:27                           ;
+; Total                ; 00:05:11     ; --                      ; --                  ; 00:09:45                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

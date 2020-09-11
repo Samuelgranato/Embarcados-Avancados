@@ -26,7 +26,7 @@ component stepmotor is
         en      : in std_logic;                     -- 1 on/ 0 of
         dir     : in std_logic;                     -- 1 clock wise
         vel     : in std_logic_vector(1 downto 0);  -- 00: low / 11: fast
-		  quarter : in std_logic;
+		quarter : in std_logic;
 
         -- I/Os
         phases  : out std_logic_vector(3 downto 0)

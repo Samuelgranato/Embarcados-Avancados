@@ -4,6 +4,30 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "fpga_led_pio[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_led_pio[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_led_pio[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_led_pio[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_led_pio[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fpga_led_pio[5]",
+					"strict" : false
+				},
+				{
 					"name" : "stepmotor_pio[0]",
 					"strict" : false
 				},
@@ -20,10 +44,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "stepmotor_dir",
-					"strict" : false
-				},
-				{
 					"name" : "fpga_clk_50",
 					"strict" : false
 				},
@@ -32,15 +52,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "stepmotor_en",
+					"name" : "stepmotor_switch[0]",
 					"strict" : false
 				},
 				{
-					"name" : "stepmotor_vel[0]",
+					"name" : "stepmotor_switch[1]",
 					"strict" : false
 				},
 				{
-					"name" : "stepmotor_vel[1]",
+					"name" : "stepmotor_switch[2]",
+					"strict" : false
+				},
+				{
+					"name" : "stepmotor_switch[3]",
 					"strict" : false
 				}
 			]

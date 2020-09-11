@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("/home/labarqcomp/repositorio/Embarcados-Avancados/Entrega-1/") File("Entrega_1.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("/home/labarqcomp/repositorio/Embarcados-Avancados/Entrega-2/") File("Entrega_1.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
