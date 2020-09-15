@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Sep 10 21:21:46 2020
+Analysis & Synthesis Status : Successful - Mon Sep 14 23:36:24 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : Entrega_1
 Top-level Entity Name : LAB2_FPGA_NIOS
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 924
+Total registers : 941
 Total pins : 16
 Total virtual pins : 0
-Total block memory bits : 273,408
+Total block memory bits : 1,873,408
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

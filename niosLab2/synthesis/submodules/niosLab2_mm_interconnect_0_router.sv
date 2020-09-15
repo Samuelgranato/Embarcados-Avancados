@@ -49,14 +49,14 @@ module niosLab2_mm_interconnect_0_router_default_decode
                DEFAULT_RD_CHANNEL = -1,
                DEFAULT_DESTID = 2 
    )
-  (output [79 - 77 : 0] default_destination_id,
+  (output [82 - 80 : 0] default_destination_id,
    output [7-1 : 0] default_wr_channel,
    output [7-1 : 0] default_rd_channel,
    output [7-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[79 - 77 : 0];
+    DEFAULT_DESTID[82 - 80 : 0];
 
   generate
     if (DEFAULT_CHANNEL == -1) begin : no_default_channel_assignment
@@ -93,7 +93,7 @@ module niosLab2_mm_interconnect_0_router
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [93-1 : 0]    sink_data,
+    input  [96-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -102,7 +102,7 @@ module niosLab2_mm_interconnect_0_router
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [93-1    : 0] src_data,
+    output reg [96-1    : 0] src_data,
     output reg [7-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
@@ -112,18 +112,18 @@ module niosLab2_mm_interconnect_0_router
     // -------------------------------------------------------
     // Local parameters and variables
     // -------------------------------------------------------
-    localparam PKT_ADDR_H = 52;
+    localparam PKT_ADDR_H = 55;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 79;
-    localparam PKT_DEST_ID_L = 77;
-    localparam PKT_PROTECTION_H = 83;
-    localparam PKT_PROTECTION_L = 81;
-    localparam ST_DATA_W = 93;
+    localparam PKT_DEST_ID_H = 82;
+    localparam PKT_DEST_ID_L = 80;
+    localparam PKT_PROTECTION_H = 86;
+    localparam PKT_PROTECTION_L = 84;
+    localparam ST_DATA_W = 96;
     localparam ST_CHANNEL_W = 7;
     localparam DECODER_TYPE = 0;
 
-    localparam PKT_TRANS_WRITE = 55;
-    localparam PKT_TRANS_READ  = 56;
+    localparam PKT_TRANS_WRITE = 58;
+    localparam PKT_TRANS_READ  = 59;
 
     localparam PKT_ADDR_W = PKT_ADDR_H-PKT_ADDR_L + 1;
     localparam PKT_DEST_ID_W = PKT_DEST_ID_H-PKT_DEST_ID_L + 1;
@@ -134,19 +134,19 @@ module niosLab2_mm_interconnect_0_router
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h10000 - 64'h8000); 
-    localparam PAD1 = log2ceil(64'h11000 - 64'h10800); 
-    localparam PAD2 = log2ceil(64'h11010 - 64'h11000); 
-    localparam PAD3 = log2ceil(64'h11020 - 64'h11010); 
-    localparam PAD4 = log2ceil(64'h11030 - 64'h11020); 
-    localparam PAD5 = log2ceil(64'h11040 - 64'h11030); 
-    localparam PAD6 = log2ceil(64'h11048 - 64'h11040); 
+    localparam PAD0 = log2ceil(64'h80000 - 64'h40000); 
+    localparam PAD1 = log2ceil(64'h81000 - 64'h80800); 
+    localparam PAD2 = log2ceil(64'h81010 - 64'h81000); 
+    localparam PAD3 = log2ceil(64'h81020 - 64'h81010); 
+    localparam PAD4 = log2ceil(64'h81030 - 64'h81020); 
+    localparam PAD5 = log2ceil(64'h81040 - 64'h81030); 
+    localparam PAD6 = log2ceil(64'h81048 - 64'h81040); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h11048;
+    localparam ADDR_RANGE = 64'h81048;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -199,44 +199,44 @@ module niosLab2_mm_interconnect_0_router
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
-    // ( 0x8000 .. 0x10000 )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 17'h8000   ) begin
+    // ( 0x40000 .. 0x80000 )
+    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 20'h40000   ) begin
             src_channel = 7'b0000100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end
 
-    // ( 0x10800 .. 0x11000 )
-    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 17'h10800   ) begin
+    // ( 0x80800 .. 0x81000 )
+    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 20'h80800   ) begin
             src_channel = 7'b0000010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
-    // ( 0x11000 .. 0x11010 )
-    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 17'h11000  && read_transaction  ) begin
+    // ( 0x81000 .. 0x81010 )
+    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 20'h81000  && read_transaction  ) begin
             src_channel = 7'b1000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
-    // ( 0x11010 .. 0x11020 )
-    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 17'h11010   ) begin
+    // ( 0x81010 .. 0x81020 )
+    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 20'h81010   ) begin
             src_channel = 7'b0100000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
     end
 
-    // ( 0x11020 .. 0x11030 )
-    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 17'h11020  && read_transaction  ) begin
+    // ( 0x81020 .. 0x81030 )
+    if ( {address[RG:PAD4],{PAD4{1'b0}}} == 20'h81020   ) begin
             src_channel = 7'b0010000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
-    // ( 0x11030 .. 0x11040 )
-    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 17'h11030   ) begin
+    // ( 0x81030 .. 0x81040 )
+    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 20'h81030   ) begin
             src_channel = 7'b0001000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
-    // ( 0x11040 .. 0x11048 )
-    if ( {address[RG:PAD6],{PAD6{1'b0}}} == 17'h11040   ) begin
+    // ( 0x81040 .. 0x81048 )
+    if ( {address[RG:PAD6],{PAD6{1'b0}}} == 20'h81040   ) begin
             src_channel = 7'b0000001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end

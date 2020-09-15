@@ -155,7 +155,7 @@ ELF_PATCH_FLAG  += --simulation_enabled false
 # setting altera_avalon_jtag_uart_driver.enable_jtag_uart_ignore_fifo_full_error is false
 
 # Small-footprint (polled mode) driver none 
-# setting altera_avalon_jtag_uart_driver.enable_small_driver is true
+# setting altera_avalon_jtag_uart_driver.enable_small_driver is false
 
 # Build a custom version of newlib with the specified space-separated compiler 
 # flags. The custom newlib build will be placed in the <bsp root>/newlib 
@@ -358,12 +358,6 @@ ALT_INCLUDE_DIRS += $(ALT_LIBRARY_ROOT_DIR)/HAL/inc
 #------------------------------------------------------------------------------
 
 ALT_CPPFLAGS += -DALT_SINGLE_THREADED
-
-#------------------------------------------------------------------------------
-#        SOFTWARE COMPONENT & DRIVER SETTING-PRODUCED DEFINITIONS
-#------------------------------------------------------------------------------
-
-ALT_CPPFLAGS += -DALTERA_AVALON_JTAG_UART_SMALL
 
 #END MANAGED
 

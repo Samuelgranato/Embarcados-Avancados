@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Sep 10, 2020 11:03:08 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1599789788113</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Sep 14, 2020 11:44:41 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1600137881147</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/labarqcomp/repositorio/Embarcados-Avancados/Entrega-2/software/niosLab2_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../niosLab2.sopcinfo</SopcDesignFile>
@@ -878,7 +878,7 @@
                 <SettingName>altera_avalon_jtag_uart_driver.enable_small_driver</SettingName>
                 <Identifier>ALTERA_AVALON_JTAG_UART_SMALL</Identifier>
                 <Type>BooleanDefineOnly</Type>
-                <Value>true</Value>
+                <Value>false</Value>
                 <DefaultValue>false</DefaultValue>
                 <DestinationFile>public_mk_define</DestinationFile>
                 <Description>Small-footprint (polled mode) driver</Description>
@@ -900,37 +900,37 @@
         </Setting>
         <MemoryMap>
                 <slaveDescriptor>onchip_memory2_0</slaveDescriptor>
-                <addressRange>0x00008000 - 0x0000FFFF</addressRange>
-                <addressSpan>32768</addressSpan>
+                <addressRange>0x00040000 - 0x00078D3F</addressRange>
+                <addressSpan>232768</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pio_1</slaveDescriptor>
-                <addressRange>0x00011000 - 0x0001100F</addressRange>
+                <addressRange>0x00081000 - 0x0008100F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pio_3</slaveDescriptor>
-                <addressRange>0x00011010 - 0x0001101F</addressRange>
+                <addressRange>0x00081010 - 0x0008101F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pio_2</slaveDescriptor>
-                <addressRange>0x00011020 - 0x0001102F</addressRange>
+                <addressRange>0x00081020 - 0x0008102F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pio_0</slaveDescriptor>
-                <addressRange>0x00011030 - 0x0001103F</addressRange>
+                <addressRange>0x00081030 - 0x0008103F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x00011040 - 0x00011047</addressRange>
+                <addressRange>0x00081040 - 0x00081047</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

@@ -34,7 +34,7 @@ begin
             clk_clk              => fpga_clk_50,        				--  clk.clk
             pio_0_leds_export    => fpga_led_pio,    					--  pio_0_leds.export
             pio_1_switchs_export => stepmotor_switch, 					--  pio_1_switchs.export
-            pio_2_button_export  => stepmotor_quarter,  				--  pio_2_button.export
+            pio_2_button_export  => not stepmotor_quarter,  				--  pio_2_button.export
 			reset_reset_n 		 => '1',            					--  reset.reset_n
 			pio_3_motor_export   => stepmotor_pio     --   pio_3_motor.export
         );
