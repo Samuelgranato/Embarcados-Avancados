@@ -20,14 +20,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "fpga_led_pio[4]",
-					"strict" : false
-				},
-				{
-					"name" : "fpga_led_pio[5]",
-					"strict" : false
-				},
-				{
 					"name" : "stepmotor_pio[0]",
 					"strict" : false
 				},
