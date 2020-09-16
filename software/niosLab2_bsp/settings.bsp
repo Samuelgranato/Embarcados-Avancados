@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Sep 14, 2020 11:44:41 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1600137881147</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Sep 16, 2020 8:13:47 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1600298027057</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/labarqcomp/repositorio/Embarcados-Avancados/Entrega-2/software/niosLab2_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../niosLab2.sopcinfo</SopcDesignFile>
