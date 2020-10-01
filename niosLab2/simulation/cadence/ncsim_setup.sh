@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 linux 2020.09.16.19:32:34
+# ACDS 18.1 625 linux 2020.09.23.20:46:55
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,7 +106,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 linux 2020.09.16.19:32:34
+# ACDS 18.1 625 linux 2020.09.23.20:46:55
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="niosLab2"
@@ -151,11 +151,11 @@ mkdir -p ./libraries/avalon_st_adapter/
 mkdir -p ./libraries/rsp_mux_001/
 mkdir -p ./libraries/rsp_mux/
 mkdir -p ./libraries/rsp_demux/
-mkdir -p ./libraries/cmd_mux_002/
+mkdir -p ./libraries/cmd_mux_003/
 mkdir -p ./libraries/cmd_mux/
 mkdir -p ./libraries/cmd_demux_001/
 mkdir -p ./libraries/cmd_demux/
-mkdir -p ./libraries/router_004/
+mkdir -p ./libraries/router_005/
 mkdir -p ./libraries/router_002/
 mkdir -p ./libraries/router_001/
 mkdir -p ./libraries/router/
@@ -168,9 +168,9 @@ mkdir -p ./libraries/cpu/
 mkdir -p ./libraries/rst_controller/
 mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/mm_interconnect_0/
-mkdir -p ./libraries/pio_3/
 mkdir -p ./libraries/pio_2/
 mkdir -p ./libraries/pio_1/
+mkdir -p ./libraries/peripheral_motor_0/
 mkdir -p ./libraries/peripheral_LED_OK_0/
 mkdir -p ./libraries/onchip_memory2_0/
 mkdir -p ./libraries/nios2_gen2_0/
@@ -246,13 +246,13 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosLab2_mm_interconnect_0_rsp_mux.sv"                           -work rsp_mux                                      -cdslib ./cds_libs/rsp_mux.cds.lib                                     
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                     -work rsp_mux                                      -cdslib ./cds_libs/rsp_mux.cds.lib                                     
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosLab2_mm_interconnect_0_rsp_demux.sv"                         -work rsp_demux                                    -cdslib ./cds_libs/rsp_demux.cds.lib                                   
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosLab2_mm_interconnect_0_cmd_mux_002.sv"                       -work cmd_mux_002                                  -cdslib ./cds_libs/cmd_mux_002.cds.lib                                 
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                     -work cmd_mux_002                                  -cdslib ./cds_libs/cmd_mux_002.cds.lib                                 
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosLab2_mm_interconnect_0_cmd_mux_003.sv"                       -work cmd_mux_003                                  -cdslib ./cds_libs/cmd_mux_003.cds.lib                                 
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                     -work cmd_mux_003                                  -cdslib ./cds_libs/cmd_mux_003.cds.lib                                 
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosLab2_mm_interconnect_0_cmd_mux.sv"                           -work cmd_mux                                      -cdslib ./cds_libs/cmd_mux.cds.lib                                     
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                     -work cmd_mux                                      -cdslib ./cds_libs/cmd_mux.cds.lib                                     
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosLab2_mm_interconnect_0_cmd_demux_001.sv"                     -work cmd_demux_001                                -cdslib ./cds_libs/cmd_demux_001.cds.lib                               
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosLab2_mm_interconnect_0_cmd_demux.sv"                         -work cmd_demux                                    -cdslib ./cds_libs/cmd_demux.cds.lib                                   
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosLab2_mm_interconnect_0_router_004.sv"                        -work router_004                                   -cdslib ./cds_libs/router_004.cds.lib                                  
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosLab2_mm_interconnect_0_router_005.sv"                        -work router_005                                   -cdslib ./cds_libs/router_005.cds.lib                                  
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosLab2_mm_interconnect_0_router_002.sv"                        -work router_002                                   -cdslib ./cds_libs/router_002.cds.lib                                  
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosLab2_mm_interconnect_0_router_001.sv"                        -work router_001                                   -cdslib ./cds_libs/router_001.cds.lib                                  
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosLab2_mm_interconnect_0_router.sv"                            -work router                                       -cdslib ./cds_libs/router.cds.lib                                      
@@ -271,9 +271,9 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/altera_reset_synchronizer.v"                                     -work rst_controller                               -cdslib ./cds_libs/rst_controller.cds.lib                              
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/niosLab2_irq_mapper.sv"                                          -work irq_mapper                                   -cdslib ./cds_libs/irq_mapper.cds.lib                                  
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/niosLab2_mm_interconnect_0.v"                                    -work mm_interconnect_0                            -cdslib ./cds_libs/mm_interconnect_0.cds.lib                           
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/niosLab2_pio_3.vhd"                                              -work pio_3                                        -cdslib ./cds_libs/pio_3.cds.lib                                       
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/niosLab2_pio_2.vhd"                                              -work pio_2                                        -cdslib ./cds_libs/pio_2.cds.lib                                       
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/niosLab2_pio_1.vhd"                                              -work pio_1                                        -cdslib ./cds_libs/pio_1.cds.lib                                       
+  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/peripheral_motor.vhd"                                            -work peripheral_motor_0                           -cdslib ./cds_libs/peripheral_motor_0.cds.lib                          
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/peripheral_LED.vhd"                                              -work peripheral_LED_OK_0                          -cdslib ./cds_libs/peripheral_LED_OK_0.cds.lib                         
   ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/niosLab2_onchip_memory2_0.vhd"                                   -work onchip_memory2_0                             -cdslib ./cds_libs/onchip_memory2_0.cds.lib                            
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/niosLab2_nios2_gen2_0.v"                                         -work nios2_gen2_0                                 -cdslib ./cds_libs/nios2_gen2_0.cds.lib                                

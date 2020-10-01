@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Sep 16, 2020 8:21:36 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1600298496040</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Sep 24, 2020 6:59:06 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1600984746042</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/labarqcomp/repositorio/Embarcados-Avancados/Entrega-3/software/NiosLab2_E3_bsp</BspGeneratedLocation>
-        <BspSettingsFile>./settings.bsp</BspSettingsFile>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../niosLab2.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_gen2_0</Cpu>
@@ -905,32 +905,32 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>peripheral_LED_OK_0</slaveDescriptor>
+                <slaveDescriptor>peripheral_motor_0</slaveDescriptor>
                 <addressRange>0x00081000 - 0x0008103F</addressRange>
                 <addressSpan>64</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pio_1</slaveDescriptor>
-                <addressRange>0x00081040 - 0x0008104F</addressRange>
-                <addressSpan>16</addressSpan>
+                <slaveDescriptor>peripheral_LED_OK_0</slaveDescriptor>
+                <addressRange>0x00081040 - 0x0008107F</addressRange>
+                <addressSpan>64</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pio_3</slaveDescriptor>
-                <addressRange>0x00081050 - 0x0008105F</addressRange>
+                <slaveDescriptor>pio_1</slaveDescriptor>
+                <addressRange>0x00081080 - 0x0008108F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pio_2</slaveDescriptor>
-                <addressRange>0x00081060 - 0x0008106F</addressRange>
+                <addressRange>0x00081090 - 0x0008109F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x00081070 - 0x00081077</addressRange>
+                <addressRange>0x000810A0 - 0x000810A7</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

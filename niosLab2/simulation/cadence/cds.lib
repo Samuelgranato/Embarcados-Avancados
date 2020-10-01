@@ -14,11 +14,11 @@ DEFINE avalon_st_adapter                            ./libraries/avalon_st_adapte
 DEFINE rsp_mux_001                                  ./libraries/rsp_mux_001/                                 
 DEFINE rsp_mux                                      ./libraries/rsp_mux/                                     
 DEFINE rsp_demux                                    ./libraries/rsp_demux/                                   
-DEFINE cmd_mux_002                                  ./libraries/cmd_mux_002/                                 
+DEFINE cmd_mux_003                                  ./libraries/cmd_mux_003/                                 
 DEFINE cmd_mux                                      ./libraries/cmd_mux/                                     
 DEFINE cmd_demux_001                                ./libraries/cmd_demux_001/                               
 DEFINE cmd_demux                                    ./libraries/cmd_demux/                                   
-DEFINE router_004                                   ./libraries/router_004/                                  
+DEFINE router_005                                   ./libraries/router_005/                                  
 DEFINE router_002                                   ./libraries/router_002/                                  
 DEFINE router_001                                   ./libraries/router_001/                                  
 DEFINE router                                       ./libraries/router/                                      
@@ -31,9 +31,9 @@ DEFINE cpu                                          ./libraries/cpu/
 DEFINE rst_controller                               ./libraries/rst_controller/                              
 DEFINE irq_mapper                                   ./libraries/irq_mapper/                                  
 DEFINE mm_interconnect_0                            ./libraries/mm_interconnect_0/                           
-DEFINE pio_3                                        ./libraries/pio_3/                                       
 DEFINE pio_2                                        ./libraries/pio_2/                                       
 DEFINE pio_1                                        ./libraries/pio_1/                                       
+DEFINE peripheral_motor_0                           ./libraries/peripheral_motor_0/                          
 DEFINE peripheral_LED_OK_0                          ./libraries/peripheral_LED_OK_0/                         
 DEFINE onchip_memory2_0                             ./libraries/onchip_memory2_0/                            
 DEFINE nios2_gen2_0                                 ./libraries/nios2_gen2_0/                                

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'niosLab2'
  * SOPC Builder design path: ../../niosLab2.sopcinfo
  *
- * Generated: Wed Sep 16 20:21:36 BRT 2020
+ * Generated: Wed Sep 23 21:11:12 BRT 2020
  */
 
 /*
@@ -138,6 +138,7 @@
 #define __ALTERA_AVALON_PIO
 #define __ALTERA_NIOS2_GEN2
 #define __PERIPHERAL_LED_OK
+#define __PERIPHERAL_MOTOR
 
 
 /*
@@ -156,19 +157,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x81070
+#define ALT_STDERR_BASE 0x810a0
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x81070
+#define ALT_STDIN_BASE 0x810a0
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x81070
+#define ALT_STDOUT_BASE 0x810a0
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -193,7 +194,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x81070
+#define JTAG_UART_0_BASE 0x810a0
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -240,7 +241,7 @@
  */
 
 #define ALT_MODULE_CLASS_peripheral_LED_OK_0 peripheral_LED_OK
-#define PERIPHERAL_LED_OK_0_BASE 0x81000
+#define PERIPHERAL_LED_OK_0_BASE 0x81040
 #define PERIPHERAL_LED_OK_0_IRQ -1
 #define PERIPHERAL_LED_OK_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define PERIPHERAL_LED_OK_0_NAME "/dev/peripheral_LED_OK_0"
@@ -249,12 +250,26 @@
 
 
 /*
+ * peripheral_motor_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_peripheral_motor_0 peripheral_motor
+#define PERIPHERAL_MOTOR_0_BASE 0x81000
+#define PERIPHERAL_MOTOR_0_IRQ -1
+#define PERIPHERAL_MOTOR_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PERIPHERAL_MOTOR_0_NAME "/dev/peripheral_motor_0"
+#define PERIPHERAL_MOTOR_0_SPAN 64
+#define PERIPHERAL_MOTOR_0_TYPE "peripheral_motor"
+
+
+/*
  * pio_1 configuration
  *
  */
 
 #define ALT_MODULE_CLASS_pio_1 altera_avalon_pio
-#define PIO_1_BASE 0x81040
+#define PIO_1_BASE 0x81080
 #define PIO_1_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_1_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_1_CAPTURE 0
@@ -281,7 +296,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_2 altera_avalon_pio
-#define PIO_2_BASE 0x81060
+#define PIO_2_BASE 0x81090
 #define PIO_2_BIT_CLEARING_EDGE_REGISTER 1
 #define PIO_2_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_2_CAPTURE 1
@@ -300,32 +315,5 @@
 #define PIO_2_RESET_VALUE 0
 #define PIO_2_SPAN 16
 #define PIO_2_TYPE "altera_avalon_pio"
-
-
-/*
- * pio_3 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_pio_3 altera_avalon_pio
-#define PIO_3_BASE 0x81050
-#define PIO_3_BIT_CLEARING_EDGE_REGISTER 0
-#define PIO_3_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define PIO_3_CAPTURE 0
-#define PIO_3_DATA_WIDTH 4
-#define PIO_3_DO_TEST_BENCH_WIRING 0
-#define PIO_3_DRIVEN_SIM_VALUE 0
-#define PIO_3_EDGE_TYPE "NONE"
-#define PIO_3_FREQ 50000000
-#define PIO_3_HAS_IN 0
-#define PIO_3_HAS_OUT 1
-#define PIO_3_HAS_TRI 0
-#define PIO_3_IRQ -1
-#define PIO_3_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define PIO_3_IRQ_TYPE "NONE"
-#define PIO_3_NAME "/dev/pio_3"
-#define PIO_3_RESET_VALUE 0
-#define PIO_3_SPAN 16
-#define PIO_3_TYPE "altera_avalon_pio"
 
 #endif /* __SYSTEM_H_ */

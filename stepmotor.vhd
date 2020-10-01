@@ -118,6 +118,32 @@ BEGIN
 					END IF;
 				END IF;
 			END IF;
+
+            --	  if (vel = "00") then
+            --	    topCounter <= 10000000;
+            --	  else if (vel = "01") then
+            --	    topCounter <= 5000000;
+            --	  else if (vel = "10") then
+            --	    topCounter <= 1000000;
+            --	  else
+            --	    topCounter <= 100000;
+            --	  end if;
+            --	  end if;
+            --	  end if;	  
+
+            --	  topCounter <= 10000000 when vel = "00" else
+            --							5000000 when vel = "01" else
+            --							1000000 when vel = "10" else
+            --							100000;
+            --	 if(topCounter > old_topCounter) then
+            --		rising_topCounter := rising_topCounter + 1;
+            --		if(rising_topCounter > 100) then
+            --			topCounter <= old_topCounter + 1;
+            --			rising_topCounter := 0;
+            --		end if;
+            --			
+			
+			
 			
             IF (topCounter > target_topCounter) THEN
                 rising_topCounter := rising_topCounter + 1;
@@ -137,7 +163,10 @@ BEGIN
 
                 END IF;
             END IF;
-            IF (quarter = '0' AND speed_on = '0') THEN
+
+            --	 old_topCounter := topCounter;
+
+            IF (quarter = '1' AND speed_on = '0') THEN
                 speed_on := '1';
             END IF;
 

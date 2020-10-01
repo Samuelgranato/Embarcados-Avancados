@@ -29,13 +29,13 @@
    type="SYSTEM_VERILOG"
    library="rsp_demux" />
  <file
-   path="simulation/submodules/niosLab2_mm_interconnect_0_cmd_mux_002.sv"
+   path="simulation/submodules/niosLab2_mm_interconnect_0_cmd_mux_003.sv"
    type="SYSTEM_VERILOG"
-   library="cmd_mux_002" />
+   library="cmd_mux_003" />
  <file
    path="simulation/submodules/altera_merlin_arbitrator.sv"
    type="SYSTEM_VERILOG"
-   library="cmd_mux_002" />
+   library="cmd_mux_003" />
  <file
    path="simulation/submodules/niosLab2_mm_interconnect_0_cmd_mux.sv"
    type="SYSTEM_VERILOG"
@@ -53,9 +53,9 @@
    type="SYSTEM_VERILOG"
    library="cmd_demux" />
  <file
-   path="simulation/submodules/niosLab2_mm_interconnect_0_router_004.sv"
+   path="simulation/submodules/niosLab2_mm_interconnect_0_router_005.sv"
    type="SYSTEM_VERILOG"
-   library="router_004" />
+   library="router_005" />
  <file
    path="simulation/submodules/niosLab2_mm_interconnect_0_router_002.sv"
    type="SYSTEM_VERILOG"
@@ -177,10 +177,6 @@
    type="VERILOG"
    library="mm_interconnect_0" />
  <file
-   path="simulation/submodules/niosLab2_pio_3.vhd"
-   type="VHDL"
-   library="pio_3" />
- <file
    path="simulation/submodules/niosLab2_pio_2.vhd"
    type="VHDL"
    library="pio_2" />
@@ -188,6 +184,10 @@
    path="simulation/submodules/niosLab2_pio_1.vhd"
    type="VHDL"
    library="pio_1" />
+ <file
+   path="simulation/submodules/peripheral_motor.vhd"
+   type="VHDL"
+   library="peripheral_motor_0" />
  <file
    path="simulation/submodules/peripheral_LED.vhd"
    type="VHDL"
